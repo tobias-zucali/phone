@@ -37,11 +37,10 @@ import wave
 
 # THRESHOLD = 500
 THRESHOLD = 1500
-# CHUNK_SIZE = 512
 CHUNK_SIZE = 1024
 FORMAT = pyaudio.paInt16
 # RATE = 44100
-RATE = 22500
+RATE = 22050 # raspberry pi 3 is not capable to record with 44100
 SILENCE_TIMEOUT = 45 # 30
 
 def is_silent(snd_data):
