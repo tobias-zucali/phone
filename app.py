@@ -4,7 +4,7 @@ from time import sleep
 
 from record import record_to_file, play_from_file
 from speak import speak
-from beep import beep
+from beep import Beep
 from phone import Bell, Blink, Dial, Flash_button, Receiver
 
 
@@ -51,7 +51,8 @@ def get_set_blink_value(blink, value):
 def record_some_words():
   sleep(2)
   speak("Bitte sprechen Sie nach dem Piepston")
-  beep()
+  beep = Beep()
+  beep.play(1000)
 
   record_to_file('demo.wav')
 
