@@ -23,15 +23,15 @@ def main():
   print("waiting for pickup")
 
   # # test bell
-  # blink = Blink(BLINK_GPIO)
-  # blink.pulse(3)
+  blink = Blink(BLINK_GPIO)
+  blink.pulse(3)
 
   # # test flash button
-  # flash_button = Flash_button(FLASH_BUTTON_LOW_GPIO, FLASH_BUTTON_HIGH_GPIO)
-  # flash_button.when_pressed_half(get_set_blink_value(blink, 0.5))
-  # flash_button.when_pressed_full(get_set_blink_value(blink, 1))
-  # flash_button.when_released_full(get_set_blink_value(blink, 0.5))
-  # flash_button.when_released_half(get_set_blink_value(blink, 0))
+  flash_button = Flash_button(FLASH_BUTTON_LOW_GPIO, FLASH_BUTTON_HIGH_GPIO)
+  flash_button.when_pressed_half(get_set_blink_value(blink, 0.5))
+  flash_button.when_pressed_full(get_set_blink_value(blink, 1))
+  flash_button.when_released_full(get_set_blink_value(blink, 0.5))
+  flash_button.when_released_half(get_set_blink_value(blink, 0))
 
   # test bell
   bell = Bell(BELL_1_GPIO, BELL_2_GPIO)
@@ -51,8 +51,8 @@ def get_set_blink_value(blink, value):
 def record_some_words():
   sleep(2)
   speak("Bitte sprechen Sie nach dem Piepston")
-  # beep = Beep()
-  # beep.play(1000)
+  beep = Beep()
+  beep.play(1000)
 
   record_to_file('demo.wav')
 
