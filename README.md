@@ -1,3 +1,5 @@
+# phone
+This is a sample to control a hacked rotary dial disc phone with help of a raspberry pi.
 # Wissenswertes
 - [Hörton](https://de.wikipedia.org/wiki/H%C3%B6rton)
 - [Rückfragetaste](https://de.wikipedia.org/wiki/R%C3%BCckfragetaste)
